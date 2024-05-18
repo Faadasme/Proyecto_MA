@@ -16,12 +16,11 @@ if (_rc) ssc install estout														// Paquete necesario para generar tabla
 if "`c(username)'" == " " {
 	cd ""
 }
-else if "`c(username)'" == " " {
-	cd ""
+else if "`c(username)'" == "Osvaldo" { 
+	cd "C:\Users\Osvaldo\OneDrive - Universidad Católica de Chile\Escritorio\MICRO APLICADA\Proyecto Micro Aplicada"
 }
 else if "`c(username)'" == "franc" {
-	cd "C:\Users\franc\Documents\GitHub\Proyecto_MicroAplicada"
-	
+	cd "C:\Users\franc\Documents\GitHub\Proyecto_MA"
 }
 
 // Preparación base de datos 
@@ -78,20 +77,12 @@ scatter salario mujer
 graph export "salario_mujer.pdf", replace
 
 * ANOVA: permite evaluar si hay una diferencia significativa en los salarios medios entre hombres y mujeres.
-anova salario educ mujer hijos hijos_5
-
-
-
+*anova salario educ mujer hijos hijos_5
 
 ** Regresión MCO
 
 eststo: reg salario educ mujer hijos hijos_5, r
 esttab using "regMCO.tex" , replace
-
-
-
-
-
 
 
 *log close
