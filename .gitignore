@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+base.dta
+baseproyecto.dta
+regMCO.tex
+~Proyecto.do.stswp
